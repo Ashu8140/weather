@@ -51,18 +51,17 @@ function Weather() {
   const icons = allIcons[data.weather[0].icon] || sun;
 
   return (
-    <div className="h-screen p-4 bg-gradient-to-b from-blue-900 to-blue-700 text-white">
-      <div className="bg-blue-950 p-6 mx-auto max-w-xl rounded-xl shadow-lg flex flex-col items-center">
-        {/* Input and Search */}
+    <div className="pt  h-screen bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+      <div className="bg-blue-950  mx-auto max-w-xl rounded-xl shadow-lg flex flex-col items-center">
         <div className="mt-4 flex items-center gap-2">
           <input
             placeholder="Enter Location"
             value={query}
             onChange={handleChange}
-            className="border border-black px-2 py-2 text-black rounded-full"
+            className="border border-black p-2 py-2 text-black rounded-full"
           />
           <button
-            className="border border-black px-4 py-3 rounded-full bg-white text-black"
+            className="border border-black px-2 py-2 rounded-full bg-white text-black"
             onClick={handleSearch}
           >
             <HiSearch />
@@ -80,7 +79,7 @@ function Weather() {
 
         <div className="mt-2 flex items-start text-lg">
           <WiHumidity className="text-4xl " />
-          <span>Humidity: {data.main.humidity}%</span>
+          <span className="pb-10">Humidity: {data.main.humidity}%</span>
         </div>
       </div>
     </div>
